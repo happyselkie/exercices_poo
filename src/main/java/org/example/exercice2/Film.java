@@ -5,10 +5,10 @@ import java.util.Date;
 public class Film {
     private String titre;
     private String realisateur;
-    private String dateSortie;
+    private Date dateSortie;
     private String genre;
 
-    public Film(String titre, String realisateur, String dateSortie, String genre) {
+    public Film(String titre, String realisateur, Date dateSortie, String genre) {
         this.titre = titre;
         this.realisateur = realisateur;
         this.dateSortie = dateSortie;
@@ -31,11 +31,11 @@ public class Film {
         this.realisateur = realisateur;
     }
 
-    public String getDateSortie() {
+    public Date getDateSortie() {
         return dateSortie;
     }
 
-    public void setdateSortie(String dateSortie) {
+    public void setdateSortie(Date dateSortie) {
         this.dateSortie = dateSortie;
     }
 
