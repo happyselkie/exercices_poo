@@ -1,14 +1,16 @@
 package org.example.exercice2;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Film {
     private String titre;
     private String realisateur;
-    private Date dateSortie;
+    //private Date dateSortie;
+    private LocalDate dateSortie;
     private String genre;
 
-    public Film(String titre, String realisateur, Date dateSortie, String genre) {
+    public Film(String titre, String realisateur, LocalDate dateSortie, String genre) {
         this.titre = titre;
         this.realisateur = realisateur;
         this.dateSortie = dateSortie;
@@ -31,11 +33,11 @@ public class Film {
         this.realisateur = realisateur;
     }
 
-    public Date getDateSortie() {
+    public LocalDate getDateSortie() {
         return dateSortie;
     }
 
-    public void setdateSortie(Date dateSortie) {
+    public void setdateSortie(LocalDate dateSortie) {
         this.dateSortie = dateSortie;
     }
 
