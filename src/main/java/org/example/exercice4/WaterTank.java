@@ -34,7 +34,9 @@ public class WaterTank {
     }
 
     public void setNiveauRemplissage(double niveauRemplissage) {
-        this.niveauRemplissage = niveauRemplissage;
+        if(niveauRemplissage > capaciteMax) System.out.println("Le niveau de remplissage ne peut pas dépasser la capacité maximale");
+        else if (niveauRemplissage < poidsAVide) System.out.println("Le niveau de remplissage ne peut pas être inférieur au poids à vide");
+        else this.niveauRemplissage = niveauRemplissage;
     }
 
     public static double getVolumeCiterne() {
