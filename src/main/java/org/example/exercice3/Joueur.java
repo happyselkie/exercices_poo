@@ -16,6 +16,7 @@ public class Joueur {
     }
 
     public void setNom(String nom) {
+        System.out.println(this.nom + " change de pseudo: " +nom);
         this.nom = nom;
     }
 
@@ -43,7 +44,7 @@ public class Joueur {
     private void levelUp (){
         this.niveau++;
         this.experience = 0;
-        System.out.println("DING LEVEL UP !");
+        System.out.println("Le joueur  "+this.nom+" passe au niveau: " +this.niveau);
     }
 
     @Override
