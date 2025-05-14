@@ -1,5 +1,7 @@
 package org.example.exercice_bonus_salarie;
 
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
@@ -11,7 +13,8 @@ public class App {
         Salarie emma = new Salarie(53, "Compta", "salarie", "Emma", 30000);
         Salarie georges = new Salarie(54, "IT", "junior", "Georges", 26000);
 
-        Salarie[] salaries = {chloe, emma, georges};
+        ArrayList<Salarie> lesSalaries = Salarie.getLesSalaries();
+        System.out.println(lesSalaries);
 
         while(option != 5){
             System.out.println("#------------------------------------------------#");
@@ -25,10 +28,13 @@ public class App {
 
             switch (option){
                 case 1 :
-                    for (Salarie salarie : salaries) {
-                        if(salarie != null) System.out.println(salarie.AfficherSalaire()+"\n");
-                        else System.out.println("Il n'y a plus d'employés");
+                    if(!lesSalaries.isEmpty()){
+                        for (Salarie salarie : lesSalaries) {
+                            System.out.println(salarie.AfficherSalaire()+"\n");
+                        }
                     }
+                    else System.out.println("Il n'y a plus d'employés");
+
                     break;
                 case 2 :
                     System.out.println("il y a "+Salarie.getNbEmploye()+" employés\n");
@@ -38,10 +44,7 @@ public class App {
                     break;
                 case 4 :
                     Salarie.resetEmploye();
-
-                    for (int i = 0; i < salaries.length; i++){
-                        salaries[i] = null;
-                    }
+                    lesSalaries.clear();
 
                     System.out.println("Tous les employés ont été supprimé\n");
                     break;

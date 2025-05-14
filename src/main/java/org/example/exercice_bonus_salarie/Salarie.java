@@ -1,5 +1,7 @@
 package org.example.exercice_bonus_salarie;
 
+import java.util.ArrayList;
+
 public class Salarie {
     private int matricule;
     private String service;
@@ -9,6 +11,7 @@ public class Salarie {
 
     private static int nbEmploye;
     private static int salaireTotal;
+    private static final ArrayList <Salarie> lesSalaries = new ArrayList<Salarie>();
 
     public Salarie(int matricule, String service, String categorie, String nom, double salaire) {
         this.matricule = matricule;
@@ -18,6 +21,7 @@ public class Salarie {
         this.salaire = salaire;
         nbEmploye++;
         salaireTotal += salaire;
+        lesSalaries.add(this);
     }
 
     public int getMatricule() {
@@ -68,6 +72,10 @@ public class Salarie {
         return salaireTotal;
     }
 
+    public static ArrayList getLesSalaries(){
+        return lesSalaries;
+    }
+
     public static void resetEmploye(){
         nbEmploye = 0;
         salaireTotal = 0;
@@ -77,5 +85,14 @@ public class Salarie {
         return "Le salaire de "+this.nom+" est de "+this.salaire;
     }
 
-
+    @Override
+    public String toString() {
+        return "Salarie{" +
+                "matricule=" + matricule +
+                ", service='" + service + '\'' +
+                ", categorie='" + categorie + '\'' +
+                ", nom='" + nom + '\'' +
+                ", salaire=" + salaire +
+                '}';
+    }
 }
