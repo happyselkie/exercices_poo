@@ -4,7 +4,7 @@ public class Chaise {
     private int nbrPieds;
     private String materiaux;
     private String couleur;
-    private double prix;
+    private double prix; // rajouté pour l'affichage du prix dans le Tostring
 
     public Chaise(int nbrPieds, String materiaux, String couleur, double prix) {
         this.nbrPieds = nbrPieds;
