@@ -13,6 +13,10 @@ public class Chaise {
         this.prix = prix;
     }
 
+    public Chaise(String materiaux, String couleur){
+        this(4, materiaux, couleur, 99.5);
+    }
+
     public Chaise(){
         this(4, "Chaine", "bleu", 15.68);
     }
