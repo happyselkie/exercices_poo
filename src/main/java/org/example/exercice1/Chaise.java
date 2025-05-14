@@ -14,7 +14,7 @@ public class Chaise {
     }
 
     public Chaise(){
-
+        this(4, "Chaine", "bleu", 15.68);
     }
 
     public int getNbrPieds() {
