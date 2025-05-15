@@ -36,8 +36,10 @@ public class Jeu {
             }
         }
 
-        while (nbEssai > 0){
+        System.out.println("Jeu du pendu généré ! Nombre d'essais : "+nbEssai);
 
+        while (nbEssai > 0){
+            
         }
 
 

@@ -9,12 +9,20 @@ public class Company {
     private String address;
     private String website;
 
+    private static List<Company> companyList = new ArrayList<>();
+
     public Company(String name, int siret, String address, String website) {
         this.name = name;
         this.siret = siret;
         this.address = address;
         this.website = website;
     }
+
+
+    public String getName() {
+        return name;
+    }
+
 
     @Override
     public String toString() {
