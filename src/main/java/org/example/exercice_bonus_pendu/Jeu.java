@@ -36,6 +36,10 @@ public class Jeu {
             }
         }
 
+        while (nbEssai > 0){
+
+        }
+
 
 
 
