@@ -16,15 +16,6 @@ public class Company {
         this.website = website;
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
         return "L'entreprise " + name + " a un siret :" +siret + ", à l'adresse : " +address+". Site web : "+website;
