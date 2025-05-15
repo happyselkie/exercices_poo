@@ -7,19 +7,27 @@ public class Pendu {
     private int essais = 10;
     private List<Character> motAtrouver;
 
-    private static List<Character> masque =  new ArrayList<>();
+    private List<Character> masque =  new ArrayList<>();
 
-    public Pendu(List<Character> motAtrouver) {
+    public Pendu(List<Character> motAtrouver, List<Character> masque) {
         this.motAtrouver = motAtrouver;
+        this.masque = masque;
     }
 
-    public static List<Character> getMasque() {
+    public List<Character> getMasque() {
         return masque;
     }
 
-    public static void setMasque(List<Character> masque) {
-        Pendu.masque = masque;
+    public String getStringMasque() {
+        String charBuild;
+        String stringMasque = "";
+        for (Character caractere : masque) {
+            charBuild = String.valueOf(caractere);
+            stringMasque += charBuild;
+        }
+        return stringMasque;
     }
+
 
     public int getEssais() {
         return essais;
@@ -29,11 +37,12 @@ public class Pendu {
         this.essais = essais;
     }
 
+
    public List testChar(char c){
         Character testChar = Character.valueOf(c);
         if(motAtrouver.contains(testChar)) {
             for (int i = 0; i < motAtrouver.size(); i++) {
-                if (motAtrouver.get(i).equals(c)) this.genererMasque(motAtrouver.get(i), c);
+                if (motAtrouver.get(i).equals(c)) this.genererMasque(i, c);
             }
             essais--;
         } else essais--;
