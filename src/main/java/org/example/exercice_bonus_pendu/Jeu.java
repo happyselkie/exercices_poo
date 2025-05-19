@@ -60,11 +60,5 @@ public class Jeu {
 
         if(lePendu.testWin()) System.out.println("Bien joué ! vous avez trouvé en "+nbEssai+" tentatives !");
         else System.out.printf("Perdu ! Essayez encore.");
-
-
-
-
-
-
     }
 }
